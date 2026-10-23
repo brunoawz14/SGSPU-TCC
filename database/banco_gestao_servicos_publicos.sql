@@ -36,7 +36,8 @@ CREATE TABLE cidadao (
 
 
 -- =========================================
--- ADMINISTRADOR
+-- EQUIPE DA PREFEITURA
+-- nivel_acesso: GERAL (administrador) ou OPERADOR (trabalhador)
 -- Herda de usuário
 -- =========================================
 
@@ -59,6 +60,8 @@ CREATE TABLE solicitacao (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
 
     descricao TEXT NOT NULL,
+
+    categoria VARCHAR(50) NOT NULL DEFAULT 'Outro',
 
     data_abertura DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
 
